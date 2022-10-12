@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Calculator</title>
+</head>
+<body>
+	<form name="myForm">
+		<table>
+			<tr>
+				<td colspan="2">Ứng dụng máy tính</td>
+			</tr>
+			<tr>
+				<td>Nhập số thứ nhất</td>
+				<td><input type="text" name="st1" /></td>
+			</tr>
+			<tr>
+				<td>Nhập số thứ hai</td>
+				<td><input type="text" name="st2" /></td>
+			</tr>
+			<tr>
+				<td>Phép tính</td>
+				<td>
+					<input type="button" name="cong" value="+" onclick="tinhToan(this.value);" />
+					<input type="button" name="tru" value="-" onclick="tinhToan(this.value);" />
+					<input type="button" name="nhan" value="x" onclick="tinhToan(this.value);" />
+					<input type="button" name="chia" value="/" onclick="tinhToan(this.value);" />
+					<input type="button" name="mu" value="^" onclick="tinhToan(this.value);" />
+				</td>
+			</tr>
+			<tr>
+				<td>Phép toán khác</td>
+				<td>
+					<input type="button" name="sqrt" value="Sqrt" onclick="tinhToan(this.value);" />
+					<input type="button" name="abs" value="Abs" onclick="tinhToan(this.value);" />
+					<input type="button" name="round" value="Round" onclick="tinhToan(this.value);" />
+				</td>
+			</tr>
+			<tr>
+				<td>Kết quả</td>
+				<td><input type="text" name="ketQua" value="" /></td>
+			</tr>
+		</table>
+	</form>
+
+	<script type="text/javascript">
+		function tinhToan(value) {
+			var st1 = document.myForm.st1.value;
+			var st2 = document.myForm.st2.value;
+			var kq = document.myForm.ketQua.value;
+
+			st1 = parseFloat(st1);
+			st2 = parseFloat(st2);
+
+			switch (value) {
+				case '+':
+					kq = st1 + st2;
+					break;
+				case '-':
+					kq = st1 - st2;
+					break;
+				case 'x':
+					kq = st1 * st2;
+					break;
+				case '/':
+					if (st2 === 0) {
+						alert('Ko thể chia cho 0.');
+						kq = '';
+					} else {
+						kq = st1 / st2;
+					}
+					break;
+				case '^':
+					kq = Math.pow(st1, st2);
+					break;
+				case 'Sqrt':
+					kq = Math.sqrt(kq);
+					break;
+				case 'Abs':
+					kq = Math.abs(kq);
+					break;
+				case 'Round':
+					kq = Math.round(kq);
+					break;
+				default:
+					kq = '';
+					break;
+			}
+
+			document.myForm.ketQua.value = kq;
+		}
+	</script>
+</body>
+</html>

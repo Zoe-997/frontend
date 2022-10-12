@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS 04</title>
+</head>
+<body onload="//xinChao();">
+	<script type="text/javascript">
+		// Sự kiện trong JS
+		// Là các hành động xảy ra với trang web hoặc khi người dùng tương tác với trang web của chúng ta
+		// Ví dụ: 
+		// 		- Khi trang web đc tải xong: onload().
+		// 		- Khi 1 phần tử HTML nào đó đc click chuột vào: onclick().
+		// 		- Khi di chuột vào 1 phần tử HTML nào đó: onmouseover().
+		// 		- Khi di chuột ra khỏi 1 phần tử HTML: onmouseleave().
+		// 		- Khi dữ liệu của 1 trường trong form đc thay đổi: onchange().
+		// 		- Khi submit form: onsubmit().
+		// 		.....
+		// 		
+		// Cấu trúc viết sự kiện: <theHTML tensukien="code js"></theHTML>
+		// 
+		// Để lấy giá trị của 1 trường dữ liệu trong form, thì ta dùng:
+		// document.tenForm.tenTruongDuLieu.value;
+
+		function xinChao() {
+			alert('Trang đã tải xong');
+		}
+
+		function clickMe() {
+			alert('Nút đã đc click.');
+		}
+
+		function hoverMe() {
+			alert('Đã di chuột vào tôi rồi');
+		}
+
+		function outOfMe() {
+			alert('Đã di chuột ra ngoài');
+		}
+
+		function changeMe() {
+			alert('Dữ liệu đc nhập');
+		}
+
+		function enterText() {
+			alert('Phím đc nhấn.');
+		}
+
+		function releaseKey() {
+			alert('Đã ấn xong.');
+		}
+
+		function submitIt() {
+			var text = document.myForm.myText.value;
+
+			alert(text);
+		}
+
+		function resetIt() {
+			alert('Form đã đc làm mới');
+		}
+
+		function focusMe() {
+			// code js
+			console.log('Đã đc focus');
+		}
+
+		function blurMe() {
+			console.log('Ko nhập nữa');
+		}
+	</script>
+
+	<!-- <p onmouseleave="outOfMe();" onmouseover="hoverMe();" onclick="clickMe();">click me again</p> -->
+
+	<form name="myForm" onsubmit="submitIt();" onreset="resetIt();">
+		<input type="text" name="myText" onchange="//changeMe();" onkeydown="//enterText();" onkeyup="//releaseKey();" onfocus="//focusMe();" onblur="//blurMe();" />
+		<input type="submit" name="submit" value="Gửi" />
+		<input type="reset" name="reset" value="Làm lại" />
+		<input type="button" name="button" value="Button" onclick="alert(document.myForm.myText.value);" />
+	</form>
+</body>
+</html>

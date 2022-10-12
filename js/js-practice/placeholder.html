@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Placeholder</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function setGiaTri(value) {
+			if (value === 'Nhập dữ liệu') { // Khi click vào sẽ làm mất chữ "Nhập dữ liệu" nếu ng dùng chưa nhập gì
+				document.myForm.myText.value = '';
+			} else if (value === '') { // Khi click ra ngoài sẽ trả lại chữ "Nhập dữ liệu"
+				document.myForm.myText.value = "Nhập dữ liệu";
+			}
+		}
+
+		function xoa() {
+			var text = document.myForm.myText.value;
+			text = text.slice(0, text.length - 1);
+
+			document.myForm.myText.value = text;
+		}
+	</script>
+	<form name="myForm">
+		<input type="text" name="myText" value="Nhập dữ liệu" onfocus="setGiaTri(this.value);" onblur="setGiaTri(this.value);" />
+		<input type="submit" value="Gửi" />
+		<input type="button" value="Xóa 1 chữ" onclick="xoa();" />
+	</form>
+</body>
+</html>
