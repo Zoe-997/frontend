@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Javascript 02</title>
+</head>
+
+<body>
+<script language="javascript">
+
+function mayTinh(st1, pt, st2){
+	
+	var kq;
+	switch(pt){
+		
+		case '+': kq = st1 + st2;break;
+		case '-': kq = st1 - st2;break;
+		case 'x': kq = st1 * st2;break;
+		case ':': if(st2 == 0){kq = 'Vô nghiệm';}else{kq = st1 % st2};break;
+		case '%': kq = st1 % st2;break;
+	}
+	return st1 + ' ' + pt + ' ' + st2 + ' bằng ' + kq;
+}
+
+var st1 = prompt('Vui lòng nhập vào một số bất kỳ');
+st1 = parseFloat(st1);
+var pt = prompt('Vui lòng nhập vào một trong 5 phép toán sau "+, -, x, :, %"');
+var st2 = prompt('Vui lòng nhập vào một số bất kỳ');
+st2 = parseFloat(st2);
+
+alert(mayTinh(st1, pt, st2));
+
+</script>
+
+
+</body>
+</html>

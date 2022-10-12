@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Javascript 05</title>
+</head>
+
+<body>
+<script language="javascript">
+
+function randImg(){
+	
+	var imgName;
+	var num = Math.random();
+	num *= 10;
+	num = Math.floor(num);
+	imgName = num+'.jpg';
+	return imgName;
+}
+
+document.write('<img border="10" src="images/bt5/'+randImg()+'" />');
+
+</script>
+
+
+</body>
+</html>

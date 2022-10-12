@@ -1,0 +1,97 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Javascript 02</title>
+<style type="text/css">
+table{
+margin: 0px auto; 
+}
+#menu{
+font-family:arial;
+font-size:14px;
+font-weight:bold;
+color:#FFF;
+text-transform:uppercase;
+text-align:center;
+background:#666;
+padding:5px 0;
+}
+
+.left{
+font-family:arial;
+font-size:12px;
+color:#FFF;
+text-transform:capitalize;
+text-align:left;
+background:#999;
+}
+</style>
+<script language="javascript">
+
+function mayTinh(pt){
+	
+	var st1 = document.frm.so1.value;
+	st1 = parseFloat(st1);
+	var st2 = document.frm.so2.value;
+	st2 = parseFloat(st2);
+	var kq = document.frm.ketqua.value;
+	
+	switch(pt){
+		
+		case '+': kq = st1 + st2;break;
+		case '-': kq = st1 - st2;break;
+		case 'x': kq = st1 * st2;break;
+		case '/': kq = st1 / st2;break;
+		
+		case 'Sqrt': kq = Math.sqrt(kq);break;
+		case 'Abs': kq = Math.abs(kq);break;
+		case 'Ceil': kq = Math.round(kq);break;
+	
+	}
+	
+	document.frm.ketqua.value = kq;
+}
+
+</script>
+</head>
+<body>
+<form name="frm" method="post">
+<table border="1" cellspacing="1" cellpadding="1">
+  <tr>
+    <td id="menu" colspan="2">ứng dụng máy tính đơn giản</td>
+  </tr>
+  <tr>
+    <td class="left">nhập số thứ nhất</td>
+    <td><input type="number" required="" name="so1" /></td>
+  </tr>
+    <tr>
+    <td class="left">nhập số thứ hai</td>
+    <td><input type="text" name="so2" /></td>
+  </tr>
+  <tr>
+    <td class="left">lựa chọn phép toán</td>
+    <td align="center">
+    	<input type="button" value="+" onclick="mayTinh(this.value);" />
+        <input type="button" value="-" onclick="mayTinh(this.value);" />
+        <input type="button" value="x" onclick="mayTinh(this.value);" />
+        <input type="button" value="/" onclick="mayTinh(this.value);" />
+    </td>
+  </tr>
+  <tr>
+    <td class="left">các phép toán khác</td>
+    <td align="center">
+    	<input type="button" value="Sqrt" onclick="mayTinh(this.value);" />
+        <input type="button" value="Abs" onclick="mayTinh(this.value);" />
+        <input type="button" value="Ceil" onclick="mayTinh(this.value);" />
+    </td>
+  </tr>
+  <tr>
+    <td class="left">kết quả</td>
+    <td><input type="text" name="ketqua" /></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

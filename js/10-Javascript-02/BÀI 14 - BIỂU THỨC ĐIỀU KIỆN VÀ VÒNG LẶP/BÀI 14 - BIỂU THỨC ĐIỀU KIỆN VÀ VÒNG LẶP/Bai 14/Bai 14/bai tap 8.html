@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bai 14 --&gt; bai tap 8.html</title>
+</head>
+
+<body>
+<script language="javascript">
+/*chuong trinh chuyen doi thang tu tieng viet sang tieng anh */
+/* dung if else */
+var thang = "tháng mười một";
+if(thang=="tháng một" || thang=="tháng giêng") document.write("January");
+else if(thang=="tháng hai") document.write("February");
+if(thang=="tháng ba") document.write("March");
+else if(thang=="tháng tư") document.write("April");
+if(thang=="tháng năm") document.write("May");
+else if(thang=="tháng sáu") document.write("June");
+if(thang=="tháng bảy") document.write("July");
+else if(thang=="tháng tám") document.write("August");
+if(thang=="tháng chín") document.write("September");
+else if(thang=="tháng mười") document.write("October");
+if(thang=="tháng mười một") document.write("November");
+else if(thang=="tháng mười hai" || thang=="tháng chạp") document.write("December");
+else document.write("Khong co thang nay nhe");
+</script>
+<br />
+<script language="javascript">
+/*dung switch case */
+var thang = "tháng giêng";
+switch(thang){
+case "tháng một":
+case "tháng giêng": 	document.write("January");break;
+case "tháng hai":   	document.write("February");break;
+case "tháng ba":    	document.write("March");break;
+case "tháng bốn":
+case "tháng tư":	    document.write("April");break;
+case "tháng năm":   	document.write("May");break;
+case "tháng sáu":   	document.write("June");break;
+case "tháng bảy":   	document.write("July");break;
+case "tháng tám":   	document.write("August");break;
+case "tháng chín":  	document.write("September");break;
+case "tháng mười":  	document.write("October");break;
+case "tháng mười một": 	document.write("November");break;
+case "tháng mười hai": 
+case "tháng chạp":    	document.write("December");break;
+default: document.write("Không có tháng này nhé");break;
+}
+</script>
+</body>
+</html>

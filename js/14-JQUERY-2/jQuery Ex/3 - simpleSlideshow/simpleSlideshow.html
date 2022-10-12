@@ -1,0 +1,68 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="jquery.js"></script>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+	}
+#simple-slideshow{
+	margin:20px auto;
+	width:450px;
+	height:300px;
+	border:1px solid #999;
+	padding:2px;
+	}
+#simple-slideshow img{
+	position:absolute;
+	display:none;
+	}	
+</style>
+</head>
+
+<body>
+
+<script>
+(function($){
+	
+	$.simpleSlideshow = function(selector, options){
+		
+		var imgs, i=2;
+		imgs = $(selector).children('img');
+		imgs.eq(i).show();
+		setInterval(function(){
+			
+			imgs.eq(i).fadeOut(1000);
+			
+			i = (i++ == 3)? 0: i++;
+
+			imgs.eq(i).fadeIn(1000);
+			
+			
+			
+		}, 2000);
+		
+	};
+})(jQuery);
+</script>
+
+<script>
+$(document).ready(function(e) {
+		
+		$.simpleSlideshow('#simple-slideshow', {});
+ 
+});
+</script>
+
+<div id="simple-slideshow">
+	<img src="1.jpg"/>
+    <img src="2.jpg"/>
+    <img src="3.jpg"/>
+    <img src="4.jpg"/>
+</div>
+
+</body>
+</html>

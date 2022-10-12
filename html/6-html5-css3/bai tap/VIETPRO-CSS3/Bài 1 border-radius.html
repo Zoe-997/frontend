@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Border radius</title>
+<style>
+	body{
+		padding-top:30px;
+	}
+	table{
+		margin:0 auto;
+	}
+	h1{
+		text-align:center;
+		color:#F00;
+		font-size:40px;
+	}
+	section{
+		width:200px;
+		height:200px;
+		background:#00F;
+		text-align:center;
+		color:#FFF;
+		line-height:200px;
+		font-size:16px;
+		font-weight:bold;
+	}
+	.box1{
+		border-radius:0px;
+		-webkit-border-radius:0px;
+		-moz-border-radius:0px;
+	}
+	.box2{
+		border-radius:40px;
+		-webkit-border-radius:40px;
+		-moz-border-radius:40px;
+	}
+	.box3{
+		border-radius:20px 80px;
+		
+	}
+	.box4{
+		border-radius:120px 20px 0px 50px;
+		-webkit-border-radius:120px 20px 0px 50px;
+		-moz-border-radius:120px 20px 0px 50px;
+	}
+	.box5{
+		border-radius:50%;
+		-webkit-border-radius:50%;
+		-moz-border-radius:50%;
+	}
+
+</style>
+</head>
+<table width="1000" align="center">
+	<tr>
+    	<td colspan="5" align="center"><h1>BORDER-RADIUS :</h1></td>
+    </tr>
+	<tr>
+    	<td>
+        	<section class="box1">0px</section>
+        </td>
+        <td>
+        	<section class="box2">40px</section>
+        </td>
+        <td>
+        	<section class="box3">20px 80px</section>
+        </td>
+        <td>
+        	<section class="box4">120px 20px 0px 50px</section>
+        </td>
+        <td>
+        	<section class="box5">50%</section>
+        </td>
+    </tr>
+</table>
+<body>
+</body>
+</html>

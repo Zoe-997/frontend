@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Media queries</title>
+<style>
+/*Mặc định với màn hình laptop , pc , có kích thước màn hình lớn hơn 1000px*/
+*{
+	padding:0px;
+	margin:0 auto;
+}
+body{
+	padding:20px;
+}
+.main{
+	width:1000px;
+}
+.main .content{
+	width:600px;
+	height:500px;
+	float:left;
+	background:#00F;
+}
+.main .content{color:#f00; font-size:27px;}
+.main .sidebar{
+	width:400px;
+	height:500px;
+	float:right;
+	background:red;
+}
+/*Mặc định nhỏ hơn 1000px*/
+@media screen and (max-width: 1000px) {
+    body{
+		padding:0px;
+	}
+	.main{
+		width:100%;
+	}
+	.main .content{
+		width:60%;
+		background:#0F0;
+	}
+	.main .content{font-size:10px;}
+	.main .sidebar{
+		width:40%;
+		background:#FF0;
+	}
+}
+/*Mặc định nhỏ hơn 600px*/
+@media screen and (max-width: 600px) {
+	.main{
+		width:100%;
+	}
+	.main .content{
+		width:100%;
+		background:#0FF;
+	}
+	.main .sidebar{
+		width:100%;
+		background:#F90;
+	}
+}
+
+
+
+</style>
+</head>
+<body>
+    <section class="main">
+    	<section class="content">
+        	<h1>Xin chào các bạn Xin chào các bạn Xin chào các bạn Xin chào các bạn Xin chào các bạn Xin chào các bạn Xin chào các bạn Xin chào các bạn Xin chào các bạn Xin chào các bạn Xin chào các bạn Xin chào các bạn Xin chào các bạn Xin chào các bạn</h1>
+        </section><!--.content-->
+        <aside class="sidebar">
+        </aside><!--.sidebar-->
+    </section><!--.main-->
+</body>
+</html>

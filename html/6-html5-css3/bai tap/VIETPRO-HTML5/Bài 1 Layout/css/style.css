@@ -1,0 +1,93 @@
+/* CSS reset */
+*{
+	padding:0px;
+	margin:0px auto;
+}
+h1{
+	color:#FFF;
+	text-align:center;
+	font-size:24px;
+	}
+.wrapper{
+	width:1000px;
+}
+/* .header */
+.wrapper .header{
+	width:1000px;
+	float:left;
+	height:100px;
+	background:#F00;
+}
+.wrapper .header h1{
+	color:#FFF;
+	
+	line-height:100px;
+}
+/* .navigation */
+.wrapper .navigation{
+	width:1000px;
+	float:left;
+	height:40px;
+	background:#00F;
+}
+.wrapper .navigation h1{
+	color:#FFF;
+	
+	line-height:40px;
+}
+/* .main */
+.wrapper .main{
+	width:980px;
+	padding:10px;
+	float:left;
+	background:#FF0;
+}
+/* .content */
+.wrapper .main .content{
+	width:750px;
+	float:left;
+	background:#090;
+	height:450px;
+}
+.wrapper .main .content p{
+	font-size:24px;
+	color:#FFF;
+	line-height:100px;
+	text-align:center;
+	font-weight:bold;
+}
+.wrapper .main .content .news{
+	margin:20px 30px;
+	background:#F0C;	
+	height:100px;
+}
+.wrapper .main .content .news h1{
+	
+	color:#FFF;
+	line-height:100px;
+}
+/* .sidebar */
+.wrapper .main .sidebar{
+	width:220px;
+	float:right;
+	background:#909;
+	height:450px;
+}
+.wrapper .main .sidebar h1{
+	color:#FFF;
+	
+	line-height:450px;	
+}
+/* .footer */
+.wrapper .footer{
+	width:1000px;
+	float:left;
+	height:50px;
+	background:#0FF;
+}
+.wrapper .footer h1{
+	color:#FFF;
+	
+	line-height:50px;
+}
+

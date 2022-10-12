@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Javascript 05</title>
+</head>
+
+<body>
+<script language="javascript">
+
+function createTable(tr, td){
+	
+	var str = '';
+	str += '<table align="center" table border="1" cellpadding="10" cellspacing="1">';
+	for(i=1; i<=tr; i++){
+		str += '<tr>';
+		for(j=1; j<=td; j++){
+			
+			data = prompt('Nhập nội dung cho cột '+i+' dòng '+j);
+			str += '<td>'+data+'</td>';
+		}
+		str += '</tr>';
+	}
+	str += '</table>';
+	
+	return str;
+}
+
+var tr = prompt('Bạn muốn tạo Bảng có bao nhiêu dòng');
+tr = parseInt(tr);
+var td = prompt('Bạn muốn mỗi dòng có bao nhiêu cột');
+td = parseInt(td);
+
+document.write(createTable(tr, td));
+
+</script>
+
+
+</body>
+</html>

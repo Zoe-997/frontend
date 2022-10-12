@@ -1,0 +1,32 @@
+/* CSS reset */
+*{
+	padding:0px;
+	margin:0px auto;
+}
+body{
+	background:url(../image/bg.jpg);
+	background-size:cover;
+	padding-top:100px;
+}
+.wrapper{
+	width:1000px;
+	background:#FFF;
+}
+.wrapper .left{
+	width:500px;
+	float:left;
+}
+.wrapper .left h1{
+	color:#fff;
+	padding-left:100px;
+}
+.wrapper .right{
+	width:500px;
+	float:right;
+}
+.wrapper .right h1{
+	padding-bottom:100px;
+	color:#fff;
+	padding-left:100px;
+}
+

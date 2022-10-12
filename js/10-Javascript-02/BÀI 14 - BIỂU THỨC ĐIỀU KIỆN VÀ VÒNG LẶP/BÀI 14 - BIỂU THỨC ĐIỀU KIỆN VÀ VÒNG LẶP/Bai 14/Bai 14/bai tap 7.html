@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bai 14 --&gt; bai tap 7.html</title>
+</head>
+
+<body>
+<script language="javascript">
+/* Chuong trinh tinh giai thua cua 1 so */
+var n = prompt("Vòng lặp for: Nhập vào n =  ");
+var x = parseInt(n);
+var giaithua1 = 1;
+/* Vong lap for */
+for (var i = 1; i<=x; i++){
+	giaithua1 = giaithua1*i;
+}
+document.write("Giai thừa của số " + x + " sử dụng vòng lặp for là: <b>" + giaithua1 + "</b><br>");
+
+/* Vong lap while */
+var n = prompt("Vòng lặp while: Nhập vào n =  ");
+var x = parseInt(n);
+var giaithua2 = 1;
+var i = 1;
+while(i<=x){
+	giaithua2 = (giaithua2)*i;
+	i++;
+}
+document.write("Giai thừa của số " + x + " sử dụng vòng lặp while là: <b>" + giaithua2 + "</b><br>");
+
+/* Vong lap do...while */
+var n = prompt("Vòng lặp do...while: Nhập vào n =  ");
+var x = parseInt(n);
+var giaithua3 = 1;
+var i = 1; 
+do{
+	giaithua3 = giaithua3*i;
+	i++;
+}
+while(i<=x)
+document.write("Giai thừa của số " + x + " sử dụng vòng lặp do...while la: <b>" + giaithua3 + "</b><br>");
+
+</script>
+</body>
+</html>

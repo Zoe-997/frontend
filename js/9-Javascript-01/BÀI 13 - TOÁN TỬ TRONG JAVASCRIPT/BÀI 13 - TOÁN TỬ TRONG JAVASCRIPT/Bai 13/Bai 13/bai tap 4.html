@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+table{
+width: 400px; 
+height: 130px; 
+font-family: arial; 
+font-size: 12px; 
+margin: 0 auto; 
+}
+
+td#title{
+color: white;
+background-color: orange;
+font-weight: bold;
+text-align: center; 
+}
+
+td.chucnang_left{
+font-weight: bold; 
+text-align: left; 
+}
+
+td.chucnang_right{
+color: orange;
+text-align: left; 
+}
+</style>
+
+</head>
+
+<body>
+<script language="javascript">
+var hoTen = prompt("Nhập Họ và Tên đầy đủ xuống dưới đây!");
+var tuoi = prompt("Nhập Tuổi xuống dưới đây!");
+var gioiTinh = prompt("Nhập Giới Tính xuống dưới đây!");
+var diaChi = prompt("Nhập Địa Chỉ xuống dưới đây!");
+var dienThoai = prompt("Nhập Điện Thoại xuống dưới đây!");
+document.write("<table border=\"1px\"><tr><td id=\"title\" colspan = \"2\" >THÔNG TIN THÀNH VIÊN</td></tr><tr><td class=\"chucnang_left\" width=\"240px\" font-weight=\"bold\">Họ và Tên</td><td class=\"chucnang_right\" width=\"160px\">"+hoTen+"</td></tr><tr><td class=\"chucnang_left\" width=\"240px\" font-weight=\"bold\"'>Tuổi</td><td class=\"chucnang_right\" width=\"160px\">"+tuoi+"</td></tr><tr><td class=\"chucnang_left\" width=\"240px\" font-weight=\"bold\"'>Giới Tính</td>	<td class=\"chucnang_right\"width=\"160px\">"+gioiTinh+"</td></tr><tr><td class=\"chucnang_left\" width=\"240px\" font-weight=\"bold\"'>Địa Chỉ</td>	<td class=\"chucnang_right\"width=\"160px\">"+diaChi+"</td></tr><tr><td class=\"chucnang_left\" width=\"240px\" font-weight=\"bold\"'>Số Điện Thoại</td>	<td class=\"chucnang_right\"width=\"160px\">"+dienThoai+"</td></tr></table>");
+</script>
+</body>
+</html>

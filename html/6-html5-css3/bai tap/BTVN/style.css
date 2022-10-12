@@ -1,0 +1,30 @@
+/* CSS Document */
+*{
+	margin:0px auto;
+	padding:0px;
+}
+@font-face {
+    font-family: "UVNThuTu";
+    src: url(file/UVNThuTu.ttf) format("truetype");
+}
+.header{
+	width:1200px;
+	min-width:1200px;
+	height:145px;
+	background:url(FILE/bg.png) bottom right no-repeat;
+}
+.header .wrapper{
+	width:1000px;
+}
+.header .wrapper figure{
+	padding:16px 0px;
+	float:left;
+}
+.header .wrapper h1{
+	font-size:45px;
+	color:#f27121;
+	font-family:'UVNThuTu';
+	line-height:145px;
+	text-align:center;
+}
+

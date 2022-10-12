@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bai 14 --&gt; bai tap 3.html</title>
+</head>
+
+<body>
+<script language="javascript">
+/* Chuong trinh tinh tong cac so chan tu 1 -> 50 */
+/* Cach 1: Dung vong lap for */
+var tong1 = 0;
+for( var i =0; i<=50; i+=2){
+	tong1 = tong1 + i;
+}
+document.write("Tổng các số chẵn từ 1 -> 50 (vòng lặp for) là: <b> " + tong1 + "</b><br>");
+
+/* Cach 2: Dung vong lap while */
+var tong2 = 0;
+var i = 0;
+while(i<=50){
+	tong2 = tong2 + i;
+	i +=2;
+}
+document.write("Tổng các số chẵn từ 1 -> 50 (vòng lặp while) là: <b> " + tong2 + "</b><br>");
+
+/* Cach 3: Dung vong lap do...while */
+var tong3 = 0; 
+var i = 0;
+do{
+	tong3 = tong3 + i;
+	i+=2;
+}while(i<=50);
+document.write("Tổng các số chẵn từ 1 -> 50 (vòng lặp do...while) là: <b> " + tong3 + "</b><br>");
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5 web form</title>
+</head>
+<body>
+<h1 align="center">Thông tin tài khoản</h1>
+<form method="post" action="">
+<table width="600" align="center"  >
+	<tr>
+    	<td><label for="fullname">Họ và tên</label></td>
+        <td><input autofocus required type="text" id="fullname" name="fullname"/></td>
+    </tr>
+    <tr>
+    	<td><label for="gend">Giới tính</label></td>
+        <td>
+        	<input type="radio" id="gend" name="gend" value="1"/> Nam<br/>
+        	<input type="radio" id="gend" name="gend" value="0"/> Nữ
+        </td>
+    </tr>
+    <tr>
+    	<td><label for="email">Email</label></td>
+        <td><input type="email" id="email" name="email"/></td>
+    </tr>
+    <tr>
+    	<td><label for="phone">Số điện thoại</label></td>
+        <td><input type="tell" id="phone" name="phone"/></td>
+    </tr>
+    <tr>
+    	<td><label for="birthday">Sinh nhật</label></td>
+        <td><input type="date" id="birthday" name="birthday"/></td>
+    </tr>
+    <tr>
+    	<td><label for="color">Màu sắc yêu thích </label></td>
+        <td><input type="color" id="color" name="color"/></td>
+    </tr>
+    <tr>
+        <td rowspan="2"><input type="submit"  name="send" value="Gửi"/></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* CSS reset */
+*{
+	margin:0px auto;
+	padding:0;
+}
+.wrapper{
+	width:1000px;
+	padding-top:60px;
+	
+}
+.wrapper header{
+	padding-bottom:50px;
+}
+.wrapper header h1{
+	text-align:center;
+	color:#000;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+.wrapper .list{
+	width:1000px;
+	float:left;
+}
+.wrapper .list ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	float:left;
+}
+.wrapper .list ul li{
+	float:left;
+	width:280px;
+	padding-left:80px;
+}
+.wrapper .list ul li:first-child{
+	padding-left:0px;
+}
+.wrapper .list ul li figure img{
+	width:280px;
+	height:220px;
+}
+.wrapper .list ul li figure figcaption a{
+	color:#F00;
+	text-decoration:none;
+	text-align:justify;
+}
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Javascript 04</title>
+</head>
+
+<body>
+<script language="javascript">
+
+var mangChan = new Array();
+var mangLe = new Array();
+var soNguyen;
+for(i=1; i<=10; i++){
+	
+	soNguyen = prompt('Vui lòng nhập vào số nguyên thứ '+i);
+	soNguyen = parseInt(soNguyen);
+	if(soNguyen % 2 == 0){
+		mangChan.push(soNguyen);
+	}
+	else{
+		mangLe.push(soNguyen);	
+	}
+}
+
+document.write('Mảng chẵn: '+mangChan+'<br/>Mảng lẻ: '+mangLe);
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="jquery.js"></script>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+	}	
+#drop-down-menu{
+	margin:10 auto;
+	font-family:Arial, Helvetica, sans-serif;
+	width:250px;
+	height:auto;
+	}	
+#drop-down-menu ul{
+	width:100%;
+	height:auto;
+	}	
+#drop-down-menu ul li.menu-item{
+	list-style:none;
+	width:230px;
+	height:35px;
+	line-height:35px;
+	background:#ff6600;
+	border-bottom:1px solid #FF8800;
+	padding:0 10px;
+	position:relative;
+	}	
+#drop-down-menu ul li.menu-item:hover{
+	cursor:pointer;
+	}	
+#drop-down-menu ul li.menu-item a{
+	font-size:12px;
+	color:#FFFFFF;
+	text-decoration:none;
+	text-transform:capitalize;
+	}
+#drop-down-menu ul li.menu-item:hover a{
+	color:#666666;
+	}	
+#drop-down-menu ul li.menu-item ul{
+	position:absolute;
+	display:none;
+	top:0;
+	left:250px;
+	}	
+#drop-down-menu ul li.menu-item ul li.menu-item a{
+color:#FFFFFF;
+}
+
+#drop-down-menu ul li.active ul{
+	display:block;
+	}	
+</style>
+</head>
+
+<body>
+
+<script>
+$(document).ready(function(e) {
+    
+	$('li.menu-item').hover(function(){
+          $(this).children('ul').fadeIn();
+      },
+      function(){
+          $(this).children('ul').fadeOut();
+       });
+});
+</script>
+
+
+<div id="drop-down-menu">
+	<ul>
+    	<li class="menu-item"><a href="#">home</a></li>
+        <li class="menu-item"><a href="#">about</a>
+        	<ul>
+                <li class="menu-item"><a href="#">who we are</a></li>
+                <li class="menu-item"><a href="#">what we do</a></li>
+                <li class="menu-item"><a href="#">our mission</a>
+            </ul>
+        </li>
+        <li class="menu-item"><a href="#">services</a>
+        	<ul>
+                <li class="menu-item"><a href="#">training</a></li>
+                <li class="menu-item"><a href="#">advertisement</a></li>
+                <li class="menu-item"><a href="#">solution</a>
+            </ul>
+        </li>
+        <li class="menu-item"><a href="#">contact</a>
+        	<ul>
+                <li class="menu-item"><a href="#">registered</a></li>
+                <li class="menu-item"><a href="#">payment instructions</a></li>
+                <li class="menu-item"><a href="#">road map</a>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

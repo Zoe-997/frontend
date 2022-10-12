@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="jquery.js"></script>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+	}
+#ads-float{
+	float:right;
+	width:auto;
+	height:auto;
+	position:fixed;
+	right:0;
+	bottom:0;
+	font-family:Arial, Helvetica, sans-serif;
+	}	
+#ads-float #ads-nav{
+	width:auto;
+	height:auto;
+	text-align:right;
+	}
+#ads-float #ads-nav a{
+	font-size:11px;
+	text-decoration:none;
+	background:#BB2026;
+	color:#FFFFFF;
+	padding:2px 4px;
+	display:inline-block;
+	}
+#ads-float #ads-main{
+	border:1px solid #BB2026;
+	}
+
+			
+</style>
+</head>
+
+<body>
+
+<script>
+$(document).ready(function(e) {
+    
+	$('#ads-float #ads-nav a').click(function(){
+		
+		var txt;
+		$('#ads-main').slideToggle();
+	});
+});
+</script>
+
+<p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p>
+<p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p>
+<p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p>
+<p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p>
+
+</body>
+</html>
+
+<div id="ads-float">
+	<div id="ads-nav">
+    	<a href="#">Quảng cáo</a>
+    </div>
+	<div id="ads-main">
+    	<img src="ads.jpg" />
+    </div>	
+</div>
+
+
+
+
+
+
+
+

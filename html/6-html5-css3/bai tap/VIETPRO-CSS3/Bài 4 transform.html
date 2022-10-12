@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Transform</title>
+<style>
+	section{
+		width:200px;
+		height:150px;
+		color:#FFF;
+		text-align:center;
+		line-height:150px;
+		font-size:24px;	
+		float:left;
+		margin:50px 20px;
+		background:#00F;
+	}
+	/* XOAY*/
+	.box1{
+		-ms-transform: rotate(20deg); /* IE 9 */
+		-webkit-transform: rotate(20deg); /* Safari */
+		transform: rotate(20deg); /* Standard syntax */ 
+	}
+	/* PHÓNG TO , THU NHỎ (DÀI-RỘNG) */
+	.box2 {
+		 -ms-transform: scale(0.5,0.5); /* IE 9 */
+		-webkit-transform: scale(0.5,0.5); /* Safari */
+		transform: scale(0.5,0.5); /* Standard syntax */
+		
+	}
+	/* NGHIÊNG X */
+	.box3 {
+		-ms-transform: skewX(20deg); /* IE 9 */
+		-webkit-transform: skewX(20deg); /* Safari */
+		transform: skewX(20deg); /* Standard syntax */
+		
+	}
+	/* NGHIÊNG Y */
+	.box4 {
+		-ms-transform: skewY(20deg); /* IE 9 */
+		-webkit-transform: skewY(20deg); /* Safari */
+		transform: skewY(20deg); /* Standard syntax */
+		
+	}
+	
+</style>
+</head>
+<body>
+	<section class="box1">rotate(20deg)</section>
+    <section class="box2">scale(0.5,0.5)</section>
+    <section class="box3">skewX(20deg)</section>
+    <section class="box4">skewY(20deg)</section>
+</body>
+</html>
