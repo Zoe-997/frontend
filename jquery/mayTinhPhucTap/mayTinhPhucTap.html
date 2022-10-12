@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<style>
+		table {
+			margin: 0 auto;
+		}
+		table, td {
+			border: 1px solid #000;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		function display(value) {
+			var kq = document.mayTinh.ketQua.value;
+
+			switch (value) {
+				case 'CE':
+					kq = '';
+					break;
+				case 'DEL':
+					kq = kq.slice(0, kq.length - 1); // Xoá 1 kí tự cuối cùng trong chuỗi
+					break;
+				case '=':
+					kq = eval(kq);
+					break;
+				default:
+					kq += value;
+					break;
+			}
+
+			document.mayTinh.ketQua.value = kq;
+		}
+	</script>
+</head>
+<body>
+	<form name="mayTinh">
+		<table>
+			<tr>
+				<td colspan="4">Máy Tính</td>
+			</tr>
+			<tr>
+				<td colspan="4"><input type="text" name="ketQua" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" name="moNgoac" value="(" onclick="display(this.value);" /></td>
+				<td><input type="button" name="dongNgoac" value=")" onclick="display(this.value);" /></td>
+				<td><input type="button" name="btnCE" value="CE" onclick="display(this.value);" /></td>
+				<td><input type="button" name="btnDel" value="DEL" onclick="display(this.value);" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" name="btn7" value="7" onclick="display(this.value);" /></td>
+				<td><input type="button" name="btn8" value="8" onclick="display(this.value);" /></td>
+				<td><input type="button" name="btn9" value="9" onclick="display(this.value);" /></td>
+				<td><input type="button" name="btnChia" value="/" onclick="display(this.value);" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" name="btn4" value="4" onclick="display(this.value);" /></td>
+				<td><input type="button" name="btn5" value="5" onclick="display(this.value);" /></td>
+				<td><input type="button" name="btn6" value="6" onclick="display(this.value);" /></td>
+				<td><input type="button" name="btnNhan" value="*" onclick="display(this.value);" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" name="btn1" value="1" onclick="display(this.value);" /></td>
+				<td><input type="button" name="btn2" value="2" onclick="display(this.value);" /></td>
+				<td><input type="button" name="btn3" value="3" onclick="display(this.value);" /></td>
+				<td><input type="button" name="btnTru" value="-" onclick="display(this.value);" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" name="btn0" value="0" onclick="display(this.value);" /></td>
+				<td><input type="button" name="btnPhay" value="." onclick="display(this.value);" /></td>
+				<td><input type="button" name="btnKetQua" value="=" onclick="display(this.value);" /></td>
+				<td><input type="button" name="btnCong" value="+" onclick="display(this.value);" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
