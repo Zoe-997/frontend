@@ -1,0 +1,109 @@
+1. Knowledge: 
+HTML,CSS
+JAVASCRIPT
+JQUERY
+BOOTSTRAP
+ES6
+
+2. Setup environment:
+Install nodejs
+
+3. Create a new application:
+npm install -g create-react-app
+create-react-app my-app
+
+(npx create-react-app my-app)
+cd my-app
+npm start
+
+4. Folder structure:
+src: Source code (javascript - ES6) => most edit
+public: files that show in frontend
+node_module: modules that are needed.
+
+index.js : lấy element id = root => lấy nội dụng của app component (app.js) đổ vào
+use JSX to write HTML
+Kiểm tra component thông qua tab component trên trình developer của chome
+
+
+5. Prop: thuộc tính của 1 component.
+If, if...else...
+ShowFreeButton(){
+        const isfree = this.props.free
+        if(isfree){
+            return <button className="cost">Join lesson</button>
+        }
+}
+{this.ShowFreeButton()}
+
+const items = [
+            {
+                name: 'React JS',
+                time: '30 hours',
+                free: true,
+                decs: "This is ReactJs lesson"
+            },
+            {
+                name: 'Angular',
+                time: '50 hours',
+                free: false
+            },
+            {
+                name: 'Node JS',
+                time: '60 hours',
+                free: true
+            },
+            {
+                name: 'React Js & Node Js',
+                time: '60 hours',
+                free: false,
+                decs: 'This is special lesson'
+            }
+        ]
+
+        const listenCourses = items.map((item, index) => 
+            <Lesson Lesson key={index} name={item.name} time={item.item} free={item.free}>{item.decs}</Lesson>
+        )
+
+6. Event:
+constructor(props) {
+        super(props);
+        this.HandleClick3 = this.HandleClick3.bind(this);
+    }
+
+    HandleClick1(){
+        alert('You just clicked Warning button');
+    }
+
+    HandleClick2(content){
+        alert(content);
+    }
+
+    HandleClick3(){
+        alert(this.props.name);
+    }
+
+    ShowFreeButton(){
+        const isfree = this.props.free
+        if(isfree){
+            return <div className="actions">
+                <button onClick={this.HandleClick1} className="cost btn btn-warning">Warning</button>
+                <button onClick={() => this.HandleClick2('Danger button')} className="cost btn btn-danger">Danger</button>
+                <button onClick={() => this.HandleClick3()} className="cost btn btn-success">Success</button>
+            </div>
+        }
+    }
+ 
+7. Ref: đã bị bỏ trong phiên bản mới
+https://reactjs.org/docs/refs-and-the-dom.html#callback-refs
+
+8. State: Learn again
+
+
+9. LifeCycle:
+npm install jquery --save
+import $ from 'jquery'
+
+
+
+
