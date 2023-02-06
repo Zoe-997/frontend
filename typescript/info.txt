@@ -1,0 +1,385 @@
+cài đặt: npm install typescript --save-dev
+
+
+Tất cả các trình quản lý phụ thuộc này đều hỗ trợ tệp khóa, đảm bảo rằng mọi người trong nhóm của bạn đang sử dụng cùng một phiên bản ngôn ngữ. Sau đó, bạn có thể chạy trình biên dịch TypeScript bằng một trong các lệnh sau:
+npx tsc
+npx tsc --init
+
+Bạn có thể sử dụng npm để cài đặt TypeScript trên toàn cầu, điều này có nghĩa là bạn có thể sử dụng tsclệnh ở bất kỳ đâu trong thiết bị đầu cuối của mình:
+npm install -g typescript.
+
+VARIABLE TYPES: 
+string
+boolean
+number
+any
+unknown
+never
+undefined
+null
+
+Unable to Infer: Khi đặt loại để anytắt kiểm tra loại, hành vi này có thể bị vô hiệu hóa bằng cách bật noImplicitAnydưới dạng tùy chọn trong dự án của TypeScript tsconfig.json
+
+ARRAYS:
+const names: string[] = [];
+names.push("Dylan");
+
+Từ readonly khóa có thể ngăn các mảng bị thay đổi:
+const names: readonly string[] = ["Dylan"];
+names.push("Jack"); // Error: Property 'push' does not exist on type 'readonly string[]'.
+
+
+TypeScript có thể suy ra kiểu của một mảng nếu nó có các giá trị:
+const numbers = [1, 2, 3]; // inferred to type number[]
+numbers.push(4);
+numbers.push("2");
+let head: number = numbers[0];
+
+TUPLES:
+Tuples là một mảng được nhập với độ dài và loại được xác định trước cho mỗi chỉ mục.
+Tuple readonly: Bộ dữ liệu chỉ có các loại được xác định rõ ràng cho các giá trị ban đầu.
+Note: Thứ tự giá trị rất quan trọng
+
+OBJECT:
+const car: { type: string, model: string, year: number } = {
+  type: "Toyota",
+  model: "Corolla",
+  year: 2009
+};
+
+Thuộc tính tùy chọn:
+const car: { type: string, mileage?: number } = {
+  type: "Toyota"
+};
+car.mileage = 2000;
+
+ENUMS:
+Một enum là một "lớp" đặc biệt đại diện cho một nhóm các hằng số (các biến không thể thay đổi).
+Theo mặc định, enums sẽ khởi tạo giá trị đầu tiên 0và thêm 1 vào mỗi giá trị bổ sung:
+enum CardinalDirections {
+  North,
+  East,
+  South,
+  West
+}
+let currentDirection = CardinalDirections.North;
+console.log(currentDirection);
+currentDirection = 'North';
+
+enum CardinalDirections {
+  North = 1,
+  East,
+  South,
+  West
+}
+console.log(CardinalDirections.North);
+console.log(CardinalDirections.West);
+
+enum StatusCodes {
+  NotFound = 404,
+  Success = 200,
+  Accepted = 202,
+  BadRequest = 400
+}
+console.log(StatusCodes.NotFound);
+console.log(StatusCodes.Success);
+
+Enums cũng có thể chứa strings. Điều này phổ biến hơn so với enum số, vì tính dễ đọc và mục đích của chúng:
+enum CardinalDirections {
+  North = 'North',
+  East = "East",
+  South = "South",
+  West = "West"
+};
+console.log(CardinalDirections.North);
+console.log(CardinalDirections.West);
+
+Note: Về mặt kỹ thuật, bạn có thể trộn và khớp các giá trị enum chuỗi và số, nhưng không nên làm như vậy.
+
+ALIASES & INTERFACES:
+Bí danh và Giao diện cho phép các loại được chia sẻ dễ dàng giữa các biến/đối tượng khác nhau.
+Bí danh loại cho phép xác định các loại có tên tùy chỉnh (Bí danh).
+Bí danh loại có thể được sử dụng cho các kiểu nguyên thủy như stringhoặc các kiểu phức tạp hơn như objectsand arrays:
+type CarYear = number
+type CarType = string
+type CarModel = string
+type Car = {
+  year: CarYear,
+  type: CarType,
+  model: CarModel
+}
+
+const carYear: CarYear = 2001
+const carType: CarType = "Toyota"
+const carModel: CarModel = "Corolla"
+const car: Car = {
+  year: carYear,
+  type: carType,
+  model: carModel
+};
+
+Các giao diện tương tự như bí danh loại, ngoại trừ chúng chỉ áp dụng cho loại object:
+interface Rectangle {
+  height: number,
+  width: number
+}
+
+const rectangle: Rectangle = {
+  height: 20,
+  width: 10
+};
+
+Extending Interfaces: có nghĩa là bạn đang tạo một giao diện mới với các thuộc tính giống như giao diện ban đầu, cộng với một số thứ mới:
+interface Rectangle {
+  height: number,
+  width: number
+}
+
+interface ColoredRectangle extends Rectangle {
+  color: string
+}
+
+const coloredRectangle: ColoredRectangle = {
+  height: 20,
+  width: 10,
+  color: "red"
+};
+
+UNION TYPES: được sử dụng khi một giá trị có thể nhiều hơn một loại.
+Note: bạn cần biết loại của mình là gì khi các loại liên kết đang được sử dụng để tránh lỗi loại.
+| : OR
+
+FUNCTION:
+Return: Loại giá trị được trả về bởi hàm có thể được xác định rõ ràng.
+function getTime(): number {
+  return new Date().getTime();
+}
+
+Void Return: có thể được sử dụng để chỉ ra một hàm không trả về bất kỳ giá trị nào
+function printHello(): void {
+  console.log('Hello!');
+}
+
+Parameters: Các tham số hàm được gõ với cú pháp tương tự như khai báo biến.
+function multiply(a: number, b: number) {
+  return a * b;
+}
+
+Optional Parameters: Theo mặc định, TypeScript sẽ cho rằng tất cả các tham số là bắt buộc, nhưng chúng có thể được đánh dấu rõ ràng là tùy chọn.
+function add(a: number, b: number, c?: number) {
+  return a + b + (c || 0);
+}
+
+Default Parameters:
+function pow(value: number, exponent: number = 10) {
+  return value ** exponent;
+}
+
+Named Parameters: Nhập các tham số được đặt tên theo cùng một mẫu như nhập các tham số bình thường.
+function divide({ dividend, divisor }: { dividend: number, divisor: number }) {
+  return dividend / divisor;
+}
+
+Rest Parameters:
+function add(a: number, b: number, ...rest: number[]) {
+  return a + b + rest.reduce((p, c) => p + c, 0);
+}
+
+Type Alias:
+type Negate = (value: number) => number;
+const negateFunction: Negate = (value) => value * -1;
+
+
+CASTING: quá trình ghi đè một loại.
+
+As:
+let x: unknown = 'hello';
+console.log((x as string).length);
+
+<>:
+let x: unknown = 'hello';
+console.log((<string>x).length);
+
+Force casting: ghi đè các lỗi loại mà TypeScript có thể gây ra khi truyền, trước tiên hãy truyền tới unknown, sau đó tới loại mục tiêu.
+let x = 'hello';
+console.log(((x as unknown) as number).length);
+
+CLASS:
+Members: Types
+class Person {
+  name: string;
+}
+const person = new Person();
+person.name = "Jane";
+
+Members: Visibility
+public- (mặc định) cho phép truy cập thành viên lớp từ bất kỳ đâu
+private- chỉ cho phép truy cập vào thành viên lớp từ bên trong lớp
+protected- cho phép truy cập vào thành viên lớp từ chính nó và bất kỳ lớp nào kế thừa nó, được trình bày trong phần kế thừa bên dưới
+class Person {
+  private name: string;
+
+  public constructor(name: string) {
+    this.name = name;
+  }
+
+  public getName(): string {
+    return this.name;
+  }
+}
+
+const person = new Person("Jane");
+console.log(person.getName());
+
+Parameter Properties: 
+class Person {
+  public constructor(private name: string) {}
+  public getName(): string {
+    return this.name;
+  }
+}
+const person = new Person("Jane");
+console.log(person.getName());
+
+Readonly: private readonly name: string;
+Inheritance: Implements
+interface Shape {
+  getArea: () => number;
+}
+
+class Rectangle implements Shape {
+  public constructor(protected readonly width: number, protected readonly height: number) {}
+
+  public getArea(): number {
+    return this.width * this.height;
+  }
+}
+
+Inheritance: Extends
+interface Shape {
+  getArea: () => number;
+}
+
+class Rectangle implements Shape {
+  public constructor(protected readonly width: number, protected readonly height: number) {}
+
+  public getArea(): number {
+    return this.width * this.height;
+  }
+}
+
+class Square extends Rectangle {
+  public constructor(width: number) {
+    super(width, width);
+  }
+}
+
+Override: Khi một lớp kế thừa một lớp khác, nó có thể thay thế các thành viên của lớp cha bằng cùng tên.
+
+Abstract Classes: Các lớp có thể được viết theo cách cho phép chúng được sử dụng làm lớp cơ sở cho các lớp khác mà không cần phải triển khai tất cả các thành viên. Điều này được thực hiện bằng cách sử dụng abstracttừ khóa. Các thành viên chưa thực hiện cũng sử dụng abstracttừ khóa.
+
+BASIC GENERICS:
+
+UTILITY TYPES:
+Partialthay: đổi tất cả các thuộc tính trong một đối tượng thành tùy chọn.
+interface Point {
+  x: number;
+  y: number;
+}
+
+let pointPart: Partial<Point> = {}; // `Partial` allows x and y to be optional
+pointPart.x = 10;
+
+Requiredthay: đổi tất cả các thuộc tính trong một đối tượng được yêu cầu.
+interface Car {
+  make: string;
+  model: string;
+  mileage?: number;
+}
+
+let myCar: Required<Car> = {
+  make: 'Ford',
+  model: 'Focus',
+  mileage: 12000 // `Required` forces mileage to be defined
+};
+
+Record: là một lối tắt để xác định một loại đối tượng với một loại khóa và loại giá trị cụ thể.
+const nameAgeMap: Record<string, number> = {
+  'Alice': 21,
+  'Bob': 25
+};
+
+Record<string, number> is equivalent to { [key: string]: number }
+
+Omit: xóa các khóa khỏi một loại đối tượng.
+interface Person {
+  name: string;
+  age: number;
+  location?: string;
+}
+
+const bob: Omit<Person, 'age' | 'location'> = {
+  name: 'Bob'
+};
+
+Pick: xóa tất cả trừ các khóa đã chỉ định khỏi một loại đối tượng.
+interface Person {
+  name: string;
+  age: number;
+  location?: string;
+}
+
+const bob: Pick<Person, 'name'> = {
+  name: 'Bob'
+  // `Pick` has only kept name, so age and location were removed from the type and they can't be defined here
+};
+
+Exclude: loại bỏ các loại từ một liên minh.
+type Primitive = string | number | boolean
+const value: Exclude<Primitive, string> = true;
+
+ReturnType: trích xuất kiểu trả về của một kiểu hàm.
+type PointGenerator = () => { x: number; y: number; };
+const point: ReturnType<PointGenerator> = {
+  x: 10,
+  y: 20
+};
+
+Parameters: trích xuất các loại tham số của một loại hàm dưới dạng một mảng.
+type PointPrinter = (p: { x: number; y: number; }) => void;
+const point: Parameters<PointPrinter>[0] = {
+  x: 10,
+  y: 20
+};
+
+
+KEYOF: là một từ khóa trong TypeScript được sử dụng để trích xuất loại khóa từ một loại đối tượng. Khi được sử dụng trên một loại đối tượng có các khóa rõ ràng, hãy keyoftạo một loại kết hợp với các khóa đó.
+interface Person {
+  name: string;
+  age: number;
+}
+// `keyof Person` here creates a union type of "name" and "age", other strings will not be allowed
+function printPersonProperty(person: Person, property: keyof Person) {
+  console.log(`Printing person property ${property}: "${person[property]}"`);
+}
+let person = {
+  name: "Max",
+  age: 27
+};
+printPersonProperty(person, "name"); // Printing person property name: "Max"
+
+type StringMap = { [key: string]: unknown };
+// `keyof StringMap` resolves to `string` here
+function createStringPair(property: keyof StringMap, value: string): StringMap {
+  return { [property]: value };
+}
+
+Sử dụng các gói NPM không được nhập trong TypeScript: npm install --save-dev @types/jquery	
+
+
+???
+When a class extends another class and replaces the members of its parent it is called what? -> override
+What is the type of the parameter: `function ex(param1?: string){}`? -> string | undefined  
+'keyof' can be used with index signatures to extract the index type. -> True
+A Tuple and an Array are the same thing when discussing types -> False
+You can disable implicit variable type assignment by enabling the compiler option -> noImplicitAny
