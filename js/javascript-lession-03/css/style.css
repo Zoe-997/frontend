@@ -9,3 +9,174 @@ img{
 .btn{
     background-color: #e5e5e5;
 }
+
+.card.active{
+    border-color: red;
+    animation: sangphai 2s forwards;
+}
+
+/* @-webkit-keyframes sangphai{
+    from {transform: translateX(0);}
+    to {transform: translateX(200px);}
+} */
+
+@-webkit-keyframes sangphai{
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+        margin-top: 0;
+    }
+    50% {
+        transform: translateX(200px);
+        opacity: 1;
+        margin-top: 0;
+    }
+    100% {
+        transform: translateX(400px); 
+        opacity: 0;
+        margin-top: 100px;
+    }
+}
+
+.chieu1{
+    animation: chieu1 1s forwards;
+}
+
+@-webkit-keyframes chieu1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(200px, 0);
+    }
+    50% {
+        transform: translate(200px, 200px);
+    }
+    80% {
+        transform: translate(500px, 200px);
+    }
+    90% {
+        transform: translate(500px, 500px);
+    }
+    100% {
+        transform: translate(700px, 500px);
+    }
+}
+
+.chieu2{
+    animation: chieu2 1s forwards;
+}
+
+@-webkit-keyframes chieu2 {
+    100% {
+        transform: translate(0, 0);
+    }
+    90% {
+        transform: translate(200px, 0);
+    }
+    80% {
+        transform: translate(500px, 200px);
+    }
+    50% {
+        transform: translate(200px, 200px);
+    }
+    25% {
+        transform: translate(500px, 500px);
+    }
+    0% {
+        transform: translate(700px, 500px);
+    }
+}
+
+.facebook-effect .header{
+    padding: 10px 60px;
+    background-color: blue;
+}
+
+.facebook-effect .header .header-tools .toggle-wrapper{
+    position: relative;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.facebook-effect .header .header-tools .toggle-tab{
+    cursor: pointer;
+}
+
+.facebook-effect .header .header-tools .toggle-tab.visible{
+    color: white;
+}
+
+.facebook-effect .header .header-tools .toggle-content{
+    position: absolute;
+    top: calc(100% + 20px);
+    left: -30px;
+    width: 200px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e5e5e5;
+    border-radius: 10px;    
+    background-color: white;
+    display: none;
+}
+
+.facebook-effect .header .header-tools .toggle-content.visible{
+    display: block;
+}
+
+.facebook-effect .header .header-tools .toggle-content ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+.facebook-effect .header .header-tools .toggle-content ul li{
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: #e5e5e5
+}
+
+.facebook-effect .header .header-tools .toggle-content ul li:first-child{
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.facebook-effect .header .header-tools .toggle-content ul li:last-child{
+    border-width: 0;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+}
+
+.facebook-effect .header .header-tools .toggle-content ul li a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.facebook-effect .header .header-tools .toggle-content ul li a:hover{
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+}
+
+.facebook-effect .header .header-tools .toggle-content:before,
+.facebook-effect .header .header-tools .toggle-content:after{
+    content:'';
+    position: absolute;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+}
+
+.facebook-effect .header .header-tools .toggle-content:before{
+    border-color: transparent transparent #e5e5e5 transparent;
+    bottom: calc(100% + 1px);
+}
+
+.facebook-effect .header .header-tools .toggle-content:after{
+    border-color: transparent transparent white transparent;
+    bottom: 100%;
+}
