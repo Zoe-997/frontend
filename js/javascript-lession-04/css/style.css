@@ -1,11 +1,118 @@
-img{
-    max-width: 100%;
+body{
+    height: 100%;
+    overflow-x: hidden;
+    background-color: gray;
 }
 
-.media{
-    margin-bottom: 20px;
+.open-left-menu body{
+    overflow-y: hidden;
+}
+
+img{
+    max-width: 100%;
+    height: 100%;
+}
+
+.content{
+    transition: all .3s ease;
+    height: 100%;
+    perspective: 1200px;
+    min-height: 1000px;
+}
+
+.button-group{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.open-left-menu .button-group{
+    transition: all .4s ease;
+    transform: rotateY(-15deg);
+    transform-origin: 100% 0;
+}
+
+.left-menu{
+    background-color: #198754;
+    height: 100%;
+    width: 100%;
+    max-width: 320px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    transition: all .3s ease;
+    transform: translateX(-100%);
+    z-index: 10;
+}
+
+/* .open-left-menu .left-menu{
+    transform: translateX(0);
+} */
+
+.left-menu h3{
+    font-size: 25px;
+    padding: 10px 16px;
+}
+
+.left-menu .list-group{
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.left-menu .list-group-item{
+    background-color: transparent;
+    border-width: 0 0 1px;
+    color: white;
+}
+
+.left-menu .list-group-item:first-child{
+    border-width: 1px 0;
 }
 
 .btn{
-    background-color: #e5e5e5;
+    min-width: 100px;
+    display: inline-block;
+}
+
+.background-effect{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+    z-index: 9;
+}
+
+.open-left-menu .background-effect{
+    opacity: 1;
+    visibility: visible;
+}
+
+.open-left-menu .content{
+    transform: translateX(320px);
+}
+
+.cms-section{
+    padding: 30px 0;
+}
+
+.header-fixed.sticky{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.cms-section-scroll .item-right .card{
+    margin-bottom: 30px;
 }

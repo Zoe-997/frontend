@@ -7,58 +7,141 @@
         <link rel="stylesheet" type="text/css" href="fonts/fontawesome/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <title>JavaScript Lession 01</title>
+        <title>JavaScript Lession 04</title>
     </head>
     <body>
-        <div class="page-title" style="text-align: center;">
-            <h1 class="title">Home Page</h1>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <div class="card" id="card-1" data-note="This is card 1">
-                    <div class="card-body">
-                        <div class="media">
-                            <img src="images/blog3-min.jpg" alt="">
+        <div class="content">
+            <div class="button-group text-center header">
+                <div class="inner-button-group header-fixed">
+                    <span class="button-push btn btn-success">Push</span>
+                </div>
+            </div>
+            <div class="left-menu">
+                <h3 class="display-3 text-center">Left Menu</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Item 1</li>
+                    <li class="list-group-item">Item 2</li>
+                    <li class="list-group-item">Item 3</li>
+                    <li class="list-group-item">Item 4</li>
+                </ul>
+            </div>
+            <section class="cms-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card" id="card-1" data-note="This is card 1">
+                                <div class="card-body">
+                                    <div class="media">
+                                        <img src="images/blog3-min.jpg" alt="">
+                                    </div>
+                                    <h3 class="card-title">Title</h3>
+                                    <p class="card-text">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada.</p>
+                                    <div class="actions">
+                                        <button class="action btn btn-success">Read more</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="card-title">Title</h3>
-                        <p class="card-text">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada.</p>
-                        <div class="actions">
-                            <button class="action">Read more</button>
+                        <div class="col-4">
+                            <div class="card" id="card-2" data-note="This is card 2">
+                            <div class="card-body">
+                                <div class="media">
+                                    <img src="images/blog4-min.jpg" alt="">
+                                </div>
+                                <h3 class="card-title">Title 2</h3>
+                                <p class="card-text">Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada. Sed porttitor lectus nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+                                <div class="actions">
+                                    <button class="action btn btn-success">Read more</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card" id="card-3" data-note="This is card 3">
+                                <div class="card-body">
+                                    <div class="media">
+                                        <img src="images/blog5-min.jpg" alt="">
+                                    </div>
+                                    <h3 class="card-title">Title 3</h3>
+                                    <p class="card-text">Donec rutrum congue leo eget malesuada. Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                                    <div class="actions">
+                                        <button class="action btn btn-success">Read more</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="card" id="card-2" data-note="This is card 2">
-                <div class="card-body">
-                    <div class="media">
-                        <img src="images/blog4-min.jpg" alt="">
-                    </div>
-                    <h3 class="card-title">Title 2</h3>
-                    <p class="card-text">Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada. Sed porttitor lectus nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-                    <div class="actions">
-                        <button class="action">Read more</button>
+            </section>
+            <section class="cms-section-scroll">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3 col-item item-left sidebar">
+                            <div class="inner-item inner-sidebar">
+                                <div class="card" id="card-3" data-note="This is card 3">
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <img src="images/blog5-min.jpg" alt="">
+                                        </div>
+                                        <h3 class="card-title">Title 1</h3>
+                                        <p class="card-text">Donec rutrum congue leo eget malesuada. Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                                        <div class="actions">
+                                            <button class="action btn btn-success">Read more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-9 col-item item-right">
+                            <div class="inner-item">
+                                <div class="card" id="card-3" data-note="This is card 3">
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <img src="images/blog5-min.jpg" alt="">
+                                        </div>
+                                        <h3 class="card-title">Title 1</h3>
+                                        <p class="card-text">Donec rutrum congue leo eget malesuada. Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                                        <div class="actions">
+                                            <button class="action btn btn-success">Read more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" id="card-3" data-note="This is card 3">
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <img class="load" src="images/blog3-min.jpg" alt="">
+                                        </div>
+                                        <h3 class="card-title">Title 2</h3>
+                                        <p class="card-text">Donec rutrum congue leo eget malesuada. Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                                        <div class="actions">
+                                            <button class="action btn btn-success">Read more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" id="card-3" data-note="This is card 3">
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <img src="images/blog4-min.jpg" alt="">
+                                        </div>
+                                        <h3 class="card-title">Title 3</h3>
+                                        <p class="card-text">Donec rutrum congue leo eget malesuada. Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                                        <div class="actions">
+                                            <button class="action btn btn-success">Read more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </section>
+            <section class="cms-section-slide">
+                <div class="container">
+                    
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="card" id="card-3" data-note="This is card 3">
-                <div class="card-body">
-                    <div class="media">
-                        <img src="images/blog5-min.jpg" alt="">
-                    </div>
-                    <h3 class="card-title">Title 3</h3>
-                    <p class="card-text">Donec rutrum congue leo eget malesuada. Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
-                    <div class="actions">
-                        <button class="action">Read more</button>
-                    </div>
-                </div>
-                </div>
-            </div>
+            </section>
+            <div class="background-effect"></div>
         </div>
-
-        <button onclick="chaythu()"> Click vào đây để test</button>
 
         <!-- js -->
         <noscript>You need to enable JavaScript to run this app.</noscript>
