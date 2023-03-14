@@ -83,4 +83,52 @@ document.addEventListener("DOMContentLoaded", function(){
             }    
         }
     })
+
+    // slider
+    var sliderItem = document.querySelectorAll('.slider .slider-item');
+    var dots = document.querySelectorAll('.slider .dots .item');
+
+    var sliderTime = setInterval(function(){autoSlide()}, 3000);
+
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].addEventListener('click', function(){
+            clearInterval(sliderTime);
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('active');                
+            }
+            this.classList.add('active');
+            var dotActive = this;
+            var itemPosition = 0
+            for (itemPosition = 0; dotActive = dotActive.previousElementSibling; itemPosition++){}
+
+            for (let i = 0; i < sliderItem.length; i++) {
+                sliderItem[i].classList.remove('active');
+            }
+            sliderItem[itemPosition].classList.add('active');
+        });
+    }
+
+    function autoSlide(){
+        var sliderItemActive = document.querySelector('.slider .slider-item.active');
+        var sliderItemPosition = 0;
+        for (sliderItemPosition = 0; sliderItemActive = sliderItemActive.previousElementSibling; sliderItemPosition++){}
+
+        if (sliderItemPosition < (sliderItem.length - 1)){
+            for (let i = 0; i < sliderItem.length; i++) {
+                sliderItem[i].classList.remove('active');
+                dots[i].classList.remove('active');                
+            }
+            dots[sliderItemPosition].nextElementSibling.classList.add('active');
+            sliderItem[sliderItemPosition].nextElementSibling.classList.add('active');
+        } else {
+            for (let i = 0; i < sliderItem.length; i++) {
+                sliderItem[i].classList.remove('active');
+                dots[i].classList.remove('active');                
+            }
+            sliderItem[0].classList.add('active');
+            dots[0].classList.add('active');
+        }
+        
+    }
+
 },false);
