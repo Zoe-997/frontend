@@ -133,6 +133,7 @@ img{
     left: 0;
     text-align: center;
     z-index: 2;
+    display: none;
 }
 
 .slider .dots .item{
@@ -259,7 +260,7 @@ img{
 
 @-webkit-keyframes zoomIn{
     from{
-        transform: scale(0.5);
+        transform: scale(0.7);
         opacity: 0;
     }
 
@@ -270,7 +271,7 @@ img{
 }
 
 .slider .slider-items .slider-item.effect-normal{
-    animation: zoomOut 1s forwards;
+    animation: zoomOut 1s ease;
 }
 
 .slider .slider-items .slider-item.effect-active{
