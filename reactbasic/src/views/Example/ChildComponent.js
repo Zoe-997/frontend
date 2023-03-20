@@ -1,4 +1,5 @@
 import React from "react";
+import './Demo.scss';
 
 class ChildComponent extends React.Component{
     state = {
@@ -22,7 +23,7 @@ class ChildComponent extends React.Component{
         return (
             <React.Fragment>
                 {showJobs === false ? 
-                    <button onClick={() => this.handleShowHide()}>Show</button>
+                    <button className="btn btn-show" onClick={() => this.handleShowHide()}>Show</button>
                 :
                     <React.Fragment>
                         <div className="job-lists">
@@ -34,7 +35,7 @@ class ChildComponent extends React.Component{
                                 })
                             }
                         </div>
-                        <button onClick={() => this.handleShowHide()}>Hide</button>
+                        <button className="btn btn-hide" onClick={() => this.handleShowHide()}>Hide</button>
                     </React.Fragment>
                 }
             </React.Fragment>

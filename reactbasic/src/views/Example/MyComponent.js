@@ -25,6 +25,14 @@ class MyComponent extends React.Component{
         })
     }
 
+    componentDidUpdate(prevProps, prevState){
+        console.log('>>> run component did update: ', 'prevState: ', prevState, 'curentState: ', this.prevState);
+    }
+
+    componentDidMount(){
+        console.log('>>> run component did mount');
+    }
+
     render(){
         return (
             <React.Fragment>
