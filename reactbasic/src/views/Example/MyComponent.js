@@ -11,10 +11,16 @@ class MyComponent extends React.Component{
         ]
     }
 
+    addNewJob = (job) => {
+        this.setState({
+            arrJobs: [...this.state.arrJobs, job]
+        })
+    }
+
     render(){
         return (
             <React.Fragment>
-                <AddComponent/>
+                <AddComponent addNewJob={this.addNewJob} />
                 <ChildComponent 
                     arrJobs={this.state.arrJobs}
                 />
