@@ -4,6 +4,7 @@ class ChildComponent extends React.Component{
     state = {
         showJobs: false
     }
+    
     handleShowHide = () => {
         this.setState({
             showJobs: !this.state.showJobs
@@ -11,14 +12,16 @@ class ChildComponent extends React.Component{
     }
 
     render(){
-        console.log('>>> check props: ', this.props);
         let { arrJobs } = this.props;
         let { showJobs } = this.state;
+        let check = showJobs === true ? 'showJobs = true' : 'showJob = false';
+        console.log(check);
 
         return (
             <React.Fragment>
-                {showJobs === false && <button onClick={() => this.handleShowHide()}>Show</button>}
-                {showJobs &&
+                {showJobs === false ? 
+                    <button onClick={() => this.handleShowHide()}>Show</button>
+                :
                     <>
                         <div className="job-lists">
                             {
