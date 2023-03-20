@@ -1,9 +1,16 @@
 import React from "react";
+import ChildComponent from "./ChildComponent";
+// import FunctionComponent from "./FunctionComponent";
 
 class MyComponent extends React.Component{
     state = {
         firstName: '',
-        lastName: ''
+        lastName: '',
+        arrJobs: [
+            {id: 'job1', title: 'developer', salary: '500'},
+            {id: 'job2', title: 'tester', salary: '400'},
+            {id: 'job3', title: 'manager', salary: '1000'}
+        ]
     }
 
     handleChangeFirstName = (event) => {
@@ -41,7 +48,14 @@ class MyComponent extends React.Component{
                     onChange={(event) => this.handleChangeLastName(event)}
                     /><br/><br/>
                     <input type="submit" value="Submit" onClick={(event) => this.handleSubmit(event)}/>
-                </form> 
+                </form>
+                <ChildComponent 
+                    name={this.state.firstName}
+                    age={"26"}
+                    address={"Ha Noi"}
+                    arrJobs={this.state.arrJobs}
+                />
+                {/* <FunctionComponent arrJobs={this.state.arrJobs}/> */}
             </React.Fragment>
         )
     }
