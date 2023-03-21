@@ -94,6 +94,8 @@ class ListTodo extends React.Component{
 
         return(
             <React.Fragment>
+                <p>Simple TODO Apps with React.js </p>
+
                 <div className="list-toto-container">
                     <AddTodo addNewTodo={this.addNewTodo} />
                 </div>
@@ -101,24 +103,26 @@ class ListTodo extends React.Component{
                     { listTodos && listTodos.length > 0 &&
                         listTodos.map((item, index) => {
                             return(
-                                <div className="todo-child" key={item.id}>
-                                    {isEmptyObj === true ?
-                                        <span className="title">{index + 1} - {item.title}</span>
-                                    :
-                                        <span className="title edit">
-                                            {editTodo.id === item.id ?
-                                                <span>{index + 1} - <input type="text" value={editTodo.title} onChange={(event) => this.handleOnChangeEditTodo(event)} /></span>
-                                            :
-                                                <span>{index + 1} - {item.title}</span>
-                                        
-                                            }
-                                        </span>
-                                    }
-                                    <button className="btn btn-edit" onClick={() => this.handleEditTodo(item)}>
-                                        {isEmptyObj === false && editTodo.id === item.id ? 'Save' : 'Edit'}                                        
-                                    </button>
-                                    <button className="btn btn-delete" onClick={() => this.handleDeleteTodo(item)}>Delete</button>
-                                </div>
+                                <React.Fragment>
+                                    <div className="todo-child" key={item.id}>
+                                        {isEmptyObj === true ?
+                                            <span className="title">{index + 1} - {item.title}</span>
+                                        :
+                                            <span className="title edit">
+                                                {editTodo.id === item.id ?
+                                                    <span>{index + 1} - <input type="text" value={editTodo.title} onChange={(event) => this.handleOnChangeEditTodo(event)} /></span>
+                                                :
+                                                    <span>{index + 1} - {item.title}</span>
+                                            
+                                                }
+                                            </span>
+                                        }
+                                        <button className="btn btn-edit" onClick={() => this.handleEditTodo(item)}>
+                                            {isEmptyObj === false && editTodo.id === item.id ? 'Save' : 'Edit'}                                        
+                                        </button>
+                                        <button className="btn btn-delete" onClick={() => this.handleDeleteTodo(item)}>Delete</button>
+                                    </div>
+                                </React.Fragment>
                             )
                         })
                     }
