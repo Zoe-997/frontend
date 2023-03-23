@@ -7,14 +7,7 @@ class ListUser extends React.Component {
     state = {
         listUsers: []
     }
-    // componentDidMount(){
-    //     axios.get('https://reqres.in/api/users?page=2')
-    //     .then(res => {
-    //         console.log('>>> check res', res.data.data);
-    //     })
-    // }
 
-    // ES7:
     async componentDidMount(){
         let res = await axios.get('https://reqres.in/api/users?page=2')
         this.setState({
