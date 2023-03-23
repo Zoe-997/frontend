@@ -13,6 +13,8 @@ import MyComponent from './Example/MyComponent';
 import ListTodo from './Todos/ListTodo';
 import Nav from './Nav/Nav';
 import Home from './Example/Home';
+import ListUser from './Users/ListUser';
+import DetailUser from './Users/DetailUser';
 
 function App() {
   return (
@@ -30,6 +32,12 @@ function App() {
             </Route>
             <Route path="/about">
               <MyComponent/>
+            </Route>
+            <Route path="/user" exact>
+              <ListUser/>
+            </Route>
+            <Route path="/user/:id">
+              <DetailUser/>
             </Route>
           </Switch>
         </header>

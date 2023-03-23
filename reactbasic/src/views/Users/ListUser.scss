@@ -1,0 +1,43 @@
+$color-button: white;
+$background-button: rgba(0, 128, 0, 0.904);
+$border-color: rgba(218, 109, 7, 0.897);
+$background-delete: rgb(170, 7, 7);
+
+@mixin d-flex{
+    display: flex;
+}
+
+@mixin flex-wrap{
+    flex-wrap: wrap;
+}
+
+.list-user-content{
+    max-width: calc(400px + 10vmin);
+    border-width: 1px;
+    border-style: solid;
+    border-color: $border-color;
+    margin: 20px auto 0;
+    padding: 20px;
+    text-align: initial;
+
+        .child{
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            border-width: 0 0 1px;
+            border-style: solid;
+            border-color: $border-color;
+            @include d-flex;
+            @include flex-wrap;
+            cursor: pointer;
+        
+            &:last-child{
+                padding-bottom: 0;
+                margin-bottom: 0;
+                border-width: 0;
+            }
+        
+            .title{
+                flex: 1;
+            }
+    }
+}

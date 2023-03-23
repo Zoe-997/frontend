@@ -5,8 +5,8 @@ $background-delete: rgb(170, 7, 7);
 
 @mixin d-flex{
     display: flex;
-  }
-  
+}
+
 @mixin flex-wrap{
     flex-wrap: wrap;
 }
@@ -18,6 +18,12 @@ $background-delete: rgb(170, 7, 7);
     background-color: $background-button;
     border-width: 0;
     cursor: pointer;
+    padding: 0 2vmin;
+    min-height: 21px;
+
+    &:last-child{
+        margin-right: 0;
+    }
 }
 
 .add-todo{
@@ -25,43 +31,43 @@ $background-delete: rgb(170, 7, 7);
         margin-right: 10px;
     }
 }
-  
+
 .list-todo-content{
-    max-width: 400px;
+    max-width: calc(400px + 10vmin);
     border-width: 1px;
     border-style: solid;
     border-color: $border-color;
     margin: 20px auto 0;
     padding: 20px;
     text-align: initial;
-  
+
     .todo-child{
-      padding-bottom: 15px;
-      margin-bottom: 15px;
-      border-width: 0 0 1px;
-      border-style: solid;
-      border-color: $border-color;
-      @include d-flex;
-      @include flex-wrap;
-  
-      &:last-child{
-        padding-bottom: 0;
-        margin-bottom: 0;
-        border-width: 0;
-      }
-  
-      .title{
-        flex: 1;
-      }
-  
-      .btn{
-        &.btn-delete{
-          background-color: $background-delete;
-        }
-  
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-width: 0 0 1px;
+        border-style: solid;
+        border-color: $border-color;
+        @include d-flex;
+        @include flex-wrap;
+
         &:last-child{
-          margin-right: 0;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border-width: 0;
         }
-      }
+
+        .title{
+            flex: 1;
+        }
+
+        .btn{
+            &.btn-delete{
+            background-color: $background-delete;
+            }
+
+            &:last-child{
+            margin-right: 0;
+            }
+        }
     }
-  }
+}
