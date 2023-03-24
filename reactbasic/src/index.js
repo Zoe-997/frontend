@@ -8,7 +8,9 @@ import { createStore } from 'redux';
 import rootReducer from './store/reducers/rootReducer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const reduxStore = createStore(rootReducer);
+const reduxStore = createStore(rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION___ && window.__REDUX_DEVTOOLS_EXTENSION___()
+  );
 
 root.render(
   <React.StrictMode>
